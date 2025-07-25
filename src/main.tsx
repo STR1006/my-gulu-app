@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// FIX: Ensure the import path is './App.tsx' (single dot)
 import GuluInventoryApp from './App.tsx';
 import './index.css'; // Assuming you have a basic index.css for Tailwind
 

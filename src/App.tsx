@@ -503,7 +503,7 @@ export default function GuluInventoryApp() {
               />
             </div>
             <div className="flex gap-2">
-                <Select value={productSortBy} onValueChange={(value: 'status' | 'name' | 'quantity') => setProductSortBy(value)}>
+                <Select value={productSortBy} onValueChange={(value) => setProductSortBy(value)}>
                     <SelectTrigger className="w-auto border rounded-md bg-white">
                         <SelectValue placeholder="Sort by" />
                     </SelectTrigger>
@@ -795,7 +795,7 @@ export default function GuluInventoryApp() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
-              <Select value={sortBy} onValueChange={(value: 'name' | 'date' | 'quantity') => setSortBy(value)}>
+              <Select value={sortBy} onValueChange={(value) => setSortBy(value)}>
                 <SelectTrigger className="w-auto border rounded-md bg-white">
                   <SelectValue placeholder="Sort by" />
                 </SelectTrigger>
