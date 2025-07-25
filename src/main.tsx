@@ -12,6 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 // Register the service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
+    // The path to the service worker should be relative to the root of your deployment.
+    // Vite's `base` configuration in vite.config.js will handle prefixing this path
+    // correctly for GitHub Pages (e.g., /my-gulu-app/service-worker.js).
     navigator.serviceWorker.register('/service-worker.js')
       .then(registration => {
         console.log('Service Worker registered with scope:', registration.scope);

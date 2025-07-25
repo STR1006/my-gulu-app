@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gulu Inventory PWA</title>
     <!-- Link to your manifest.json for PWA capabilities -->
-    <link rel="manifest" href="/manifest.json" />
+    <!-- The href is relative to the base URL configured in vite.config.js -->
+    <link rel="manifest" href="./manifest.json" />
     <!-- Apple touch icon for iOS PWA -->
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
     <!-- Theme color for browser UI -->
@@ -23,6 +24,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- The script path is relative to the base URL configured in vite.config.js -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
