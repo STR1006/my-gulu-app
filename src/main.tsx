@@ -9,13 +9,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>,
 );
 
-// Register the service worker
+// PWA Service Worker Registration
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Get the base URL from Vite's environment variables
     const baseUrl = import.meta.env.BASE_URL || '/';
-
-    // Register the service worker using the correct base URL
     navigator.serviceWorker.register(`${baseUrl}service-worker.js`)
       .then(registration => {
         console.log('Service Worker registered with scope:', registration.scope);

@@ -2,29 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="<%- import.meta.env.BASE_URL %>vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gulu Inventory PWA</title>
-    <!-- Link to your manifest.json for PWA capabilities -->
-    <!-- The href is relative to the base URL configured in vite.config.js -->
-    <link rel="manifest" href="./manifest.json" />
-    <!-- Apple touch icon for iOS PWA -->
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
-    <!-- Theme color for browser UI -->
-    <meta name="theme-color" content="#58ab7f" />
-    <!-- Tailwind CSS CDN for quick styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Optional: Add a custom font */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-    </style>
+    <title>Gulu Inventory</title>
+    <link rel="manifest" href="<%- import.meta.env.BASE_URL %>manifest.json" />
   </head>
   <body>
     <div id="root"></div>
-    <!-- Vite automatically injects the correct path to your bundled JavaScript here during build. -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
