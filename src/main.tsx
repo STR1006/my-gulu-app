@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import GuluInventoryApp from './App.tsx';
-import './index.css'; // Assuming you have a basic index.css for Tailwind
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -12,10 +12,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 // Register the service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // The path to the service worker should be relative to the root of your deployment.
-    // Vite's `base` configuration in vite.config.js will handle prefixing this path
-    // correctly for GitHub Pages (e.g., /my-gulu-app/service-worker.js).
-    navigator.serviceWorker.register('/service-worker.js')
+    // Get the base URL from Vite's environment variables
+    const baseUrl = import.meta.env.BASE_URL || '/';
+
+    // Register the service worker using the correct base URL
+    navigator.serviceWorker.register(`${baseUrl}service-worker.js`)
       .then(registration => {
         console.log('Service Worker registered with scope:', registration.scope);
       })
